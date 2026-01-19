@@ -1,16 +1,16 @@
-# news_app
+# News App 📱
+News App built with Flutter - Initial UI implementation featuring horizontal categories and news feed. (Under Development)
 
-A new Flutter project.
+مشروع تطبيق أخبار متكامل باستخدام Flutter (كورس البشمهندس ثروت سامي).
 
-## Getting Started
+## ما تم إنجازه حتى الآن (Current Progress):
+* [x] تصميم الواجهة الرئيسية (Home UI).
+![homePage](assets/images/home.jpg)
+* [x] إضافة قائمة الأقسام بشكل عرضي (Horizontal Categories) وتشمل:
+  * Business, Sports, Technology, General, Science, Health, Entertainment.
+* [x] تصميم كروت عرض الأخبار (News Tile UI).
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## الخطوات القادمة (Next Steps):
+* [ ] ربط التطبيق بـ News API لجلب البيانات الحقيقية.
+* [ ] إضافة الـ Business Logic باستخدام (Cubit/Provider).
+* [ ] إضافة صفحة تفاصيل الخبر.
