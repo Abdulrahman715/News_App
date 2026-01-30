@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:news_app/views/home_view.dart';
 
 void main() {
-  runApp(newsApp());
+  runApp(NewsApp());
 }
 
-class newsApp extends StatelessWidget {
-  const newsApp({super.key});
+class NewsApp extends StatelessWidget {
+  const NewsApp({super.key});
 
   @override
   Widget build(BuildContext context) {
