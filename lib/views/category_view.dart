@@ -10,7 +10,9 @@ class CategoryView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(category),
+        centerTitle: true,
+        elevation: 2,
+        title: Text(category,style: TextStyle(fontSize: 32,fontWeight: FontWeight.bold),),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16),

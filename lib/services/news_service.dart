@@ -20,15 +20,16 @@ class NewsService {
 
       for (var element in articles) {
         ArticleModel articleMapToObj = ArticleModel(
-          image: element['urlToImage'],
-          title: element['title'],
+          title: element['title'] ?? 'No title',
           subTitle: element['description'],
-
-          // source: Source(
-          //   id: element['source']['id'],
-          //   name: element['source']['name'],
-          // ),
+          image: element['urlToImage'],
+          content: element['content'],
+          author: element['author'],
+          sourceName: element['source']['name'],
+          publishedAt: element['publishedAt'],
+          url: element['url'],
         );
+
 
         articlesList.add(articleMapToObj);
       }

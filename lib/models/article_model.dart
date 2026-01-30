@@ -1,20 +1,43 @@
 class ArticleModel {
-  final String? image;
   final String title;
   final String? subTitle;
-  // final Source source;
+  final String? image;
+  final String? content;
+  final String? author;
+  final String? sourceName;
+  final String? publishedAt;
+  final String? url;
 
   ArticleModel({
-    this.image,
     required this.title,
-    this.subTitle, 
-    // required this.source,
+    this.subTitle,
+    this.image,
+    this.content,
+    this.author,
+    this.sourceName,
+    this.publishedAt,
+    this.url,
   });
 }
 
-// class Source {
-//   final String id;
-//   final String name;
 
-//   Source({required this.id, required this.name});
+// class ArticleModel {
+//   final String? image;
+//   final String title;
+//   final String? subTitle;
+//   // final Source source;
+
+//   ArticleModel({
+//     this.image,
+//     required this.title,
+//     this.subTitle, 
+//     // required this.source,
+//   });
 // }
+
+// // class Source {
+// //   final String id;
+// //   final String name;
+
+// //   Source({required this.id, required this.name});
+// // }

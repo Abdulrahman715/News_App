@@ -12,8 +12,7 @@ class NewsByCategoryListView extends StatefulWidget {
   final String category;
 
   @override
-  State<NewsByCategoryListView> createState() =>
-      _NewsByCategoryListViewState();
+  State<NewsByCategoryListView> createState() => _NewsByCategoryListViewState();
 }
 
 class _NewsByCategoryListViewState extends State<NewsByCategoryListView> {
@@ -23,9 +22,20 @@ class _NewsByCategoryListViewState extends State<NewsByCategoryListView> {
   void initState() {
     super.initState();
 
-    futureNews = NewsService(Dio())
-        .getTopHeadlines(category: widget.category.toLowerCase());
+    futureNews = NewsService(
+      Dio(),
+    ).getTopHeadlines(category: widget.category.toLowerCase());
   }
+
+  // Future<void> refreshNews() async {
+  //   setState(() {
+  //     futureNews = NewsService(
+  //       Dio(),
+  //     ).getTopHeadlines(category: widget.category.toLowerCase());
+  //   });
+
+  //   await futureNews;
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -39,3 +49,12 @@ class _NewsByCategoryListViewState extends State<NewsByCategoryListView> {
     );
   }
 }
+
+
+// RefreshIndicator(
+//       onRefresh: refreshNews,
+//       child: CustomScrollView(
+//         physics: const BouncingScrollPhysics(
+//           parent: AlwaysScrollableScrollPhysics(),
+//         ),
+//         slivers: [
