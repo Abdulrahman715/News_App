@@ -30,7 +30,9 @@ This project is part of **Eng. Tharwat Samy Flutter Course** and is still under 
 - Health  
 - Entertainment  
 
-![Home Page](assets/images/home.jpg)
+![Home Page](assets/screenshots/home.jpg)
+![Article Details Page](assets/screenshots/articleDetails.jpg)
+![Category Page](assets/screenshots/articlesOfCategory.jpg)
 
 ---
 
