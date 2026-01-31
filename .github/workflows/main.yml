@@ -1,14 +1,14 @@
-name: Flutter Build APK
+name: Build & Release APK
 
 on:
   push:
-    branches: [ "main", "master" ]
-  pull_request:
     branches: [ "main", "master" ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions: # مهم جداً عشان الأكشن يقدر يرفع ملفات للـ Release
+      contents: write
 
     steps:
       - uses: actions/checkout@v4
@@ -17,7 +17,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           distribution: 'zulu'
-          java-version: '17' # النسخة المطلوبة لمعظم مشاريع فلاتر الحديثة
+          java-version: '17'
 
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
@@ -30,8 +30,12 @@ jobs:
       - name: Build APK
         run: flutter build apk --release
 
-      - name: Upload APK
-        uses: actions/upload-artifact@v4
+      - name: Push to Release
+        uses: softprops/action-gh-release@v1
         with:
-          name: release-apk
-          path: build/app/outputs/flutter-apk/app-release.apk
+          files: build/app/outputs/flutter-apk/app-release.apk
+          tag_name: latest
+          name: Latest Build
+          body: "هذا الملف تم توليده تلقائياً بواسطة GitHub Actions"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
