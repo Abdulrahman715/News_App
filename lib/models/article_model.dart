@@ -20,7 +20,6 @@ class ArticleModel {
   });
 }
 
-
 // class ArticleModel {
 //   final String? image;
 //   final String title;
@@ -30,7 +29,7 @@ class ArticleModel {
 //   ArticleModel({
 //     this.image,
 //     required this.title,
-//     this.subTitle, 
+//     this.subTitle,
 //     // required this.source,
 //   });
 // }

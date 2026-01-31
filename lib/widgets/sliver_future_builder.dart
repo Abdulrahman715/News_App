@@ -48,8 +48,9 @@ class SliverFutureBuilder<T> extends StatelessWidget {
         return SliverList(
           delegate: SliverChildBuilderDelegate(
             childCount: items.length,
-            (context,index)=>itemBuilder(items[index]),
-        ));
+            (context, index) => itemBuilder(items[index]),
+          ),
+        );
       },
     );
   }

@@ -16,7 +16,7 @@ class ArticlesDetails extends StatelessWidget {
       throw 'Could not launch $url';
     }
   }
-  
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -37,16 +37,16 @@ class ArticlesDetails extends StatelessWidget {
             },
           ),
         ),
-    
+
         SizedBox(height: 12),
-    
+
         Text(
           "Author : ${article.author}",
           style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
         ),
-    
+
         SizedBox(height: 12),
-    
+
         Text(
           article.title, // variable
           maxLines: 2,
@@ -57,9 +57,9 @@ class ArticlesDetails extends StatelessWidget {
             fontWeight: FontWeight.w500,
           ),
         ),
-    
+
         SizedBox(height: 12),
-    
+
         Text(
           article.subTitle ?? " ", // variable
           maxLines: 2,
@@ -70,16 +70,16 @@ class ArticlesDetails extends StatelessWidget {
             fontWeight: FontWeight.w500,
           ),
         ),
-    
+
         SizedBox(height: 12),
-    
+
         Text(
           article.content ?? "",
           style: TextStyle(fontWeight: FontWeight.w400, fontSize: 16),
         ),
-    
+
         SizedBox(height: 18),
-    
+
         TextButton.icon(
           onPressed: () {
             if (article.url != null) {
@@ -103,7 +103,7 @@ class ArticlesDetails extends StatelessWidget {
             padding: EdgeInsets.zero, // عشان ميبقاش فيه مسافات فاضية من الجنب
           ),
         ),
-    
+
         // GestureDetector(
         //   onTap: () {
         //     openArticleUrl(article.url!);

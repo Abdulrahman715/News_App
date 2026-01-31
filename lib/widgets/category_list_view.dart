@@ -6,13 +6,22 @@ class CategoryListView extends StatelessWidget {
   CategoryListView({super.key});
 
   final List<CategoryModel> categories = [
-    CategoryModel(categoryName: 'Business', image: 'assets/images/business.webp'),
-    CategoryModel(categoryName: 'Entertainment', image: 'assets/images/entertainment.webp'),
+    CategoryModel(
+      categoryName: 'Business',
+      image: 'assets/images/business.webp',
+    ),
+    CategoryModel(
+      categoryName: 'Entertainment',
+      image: 'assets/images/entertainment.webp',
+    ),
     CategoryModel(categoryName: 'General', image: 'assets/images/general.webp'),
     CategoryModel(categoryName: 'Health', image: 'assets/images/health.webp'),
     CategoryModel(categoryName: 'Science', image: 'assets/images/science.webp'),
     CategoryModel(categoryName: 'Sports', image: 'assets/images/sports.webp'),
-    CategoryModel(categoryName: 'Technology', image: 'assets/images/technology.webp'),
+    CategoryModel(
+      categoryName: 'Technology',
+      image: 'assets/images/technology.webp',
+    ),
   ];
 
   @override
@@ -23,7 +32,7 @@ class CategoryListView extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         itemCount: categories.length,
         itemBuilder: (context, index) {
-          return CategoryCard(category: categories[index],);
+          return CategoryCard(category: categories[index]);
         },
       ),
     );

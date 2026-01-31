@@ -11,7 +11,6 @@ class ArticleDetailsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
       appBar: AppBar(
         centerTitle: true,
         title: Text(
@@ -19,7 +18,6 @@ class ArticleDetailsView extends StatelessWidget {
           style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
         ),
       ),
-
 
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),

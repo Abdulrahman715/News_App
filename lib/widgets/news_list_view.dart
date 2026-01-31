@@ -37,10 +37,7 @@ class _NewsTileListViewState extends State<NewsTileListView> {
   }
 }
 
-
-
-
-//! ده بقى الحل النضيف للمشاريع الكبيرة انما احنا مشروع صغير وليه ودجت جاهزة هستخدمها فوق 
+//! ده بقى الحل النضيف للمشاريع الكبيرة انما احنا مشروع صغير وليه ودجت جاهزة هستخدمها فوق
 
 // class NewsTileListView extends StatefulWidget {
 //   const NewsTileListView({super.key});
@@ -68,7 +65,7 @@ class _NewsTileListViewState extends State<NewsTileListView> {
 
 //   @override
 //   Widget build(BuildContext context) {
-//     return SliverSkeletonizer(   
+//     return SliverSkeletonizer(
 //       enabled: isLoading,
 //       child: SliverList(
 //         delegate: SliverChildBuilderDelegate(
@@ -91,7 +88,6 @@ class _NewsTileListViewState extends State<NewsTileListView> {
 //       ),
 //     );
 //   }
-
 
 // }
 
@@ -132,7 +128,7 @@ class _NewsTileListViewState extends State<NewsTileListView> {
 
 // @override
 //   Widget build(BuildContext context) {
-//     return SliverSkeletonizer(   
+//     return SliverSkeletonizer(
 //       enabled: isLoading,
 //       child: SliverList(
 //         delegate: SliverChildBuilderDelegate(

@@ -50,7 +50,6 @@ class _NewsByCategoryListViewState extends State<NewsByCategoryListView> {
   }
 }
 
-
 // RefreshIndicator(
 //       onRefresh: refreshNews,
 //       child: CustomScrollView(

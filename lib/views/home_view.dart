@@ -17,7 +17,7 @@ class HomeView extends StatelessWidget {
             style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
             children: [
               TextSpan(
-                text: 'News' ,
+                text: 'News',
                 style: TextStyle(color: Colors.black),
               ),
               TextSpan(
@@ -35,12 +35,11 @@ class HomeView extends StatelessWidget {
           physics: BouncingScrollPhysics(),
           slivers: [
             SliverToBoxAdapter(child: CategoryListView()),
-            SliverToBoxAdapter(child: SizedBox(height: 22,)),
+            SliverToBoxAdapter(child: SizedBox(height: 22)),
             NewsTileListView(),
           ],
         ),
       ),
-
     );
   }
 }

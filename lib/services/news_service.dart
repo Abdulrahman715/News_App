@@ -30,7 +30,6 @@ class NewsService {
           url: element['url'],
         );
 
-
         articlesList.add(articleMapToObj);
       }
 

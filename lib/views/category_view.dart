@@ -12,14 +12,15 @@ class CategoryView extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         elevation: 2,
-        title: Text(category,style: TextStyle(fontSize: 32,fontWeight: FontWeight.bold),),
+        title: Text(
+          category,
+          style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: CustomScrollView(
-          slivers: [
-            NewsByCategoryListView(category: category),
-          ],
+          slivers: [NewsByCategoryListView(category: category)],
         ),
       ),
     );
