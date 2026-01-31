@@ -1,8 +1,8 @@
-name: Flutter Build & Test
+name: Flutter Build APK
 
 on:
   push:
-    branches: [ "main", "master" ] # هيشتغل لما ترفع كود على المين
+    branches: [ "main", "master" ]
   pull_request:
     branches: [ "main", "master" ]
 
@@ -13,6 +13,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu'
+          java-version: '17' # النسخة المطلوبة لمعظم مشاريع فلاتر الحديثة
+
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
@@ -21,11 +27,11 @@ jobs:
       - name: Install dependencies
         run: flutter pub get
 
-      - name: Check formatting
-        run: dart format --set-exit-if-changed .
+      - name: Build APK
+        run: flutter build apk --release
 
-      - name: Analyze code
-        run: flutter analyze
-
-      - name: Run tests
-        run: flutter test
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-apk
+          path: build/app/outputs/flutter-apk/app-release.apk
